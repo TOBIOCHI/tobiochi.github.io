@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tobiochi | Mechatronics engineering student and DIY builder in Nigeria</title>
+<meta name="description" content="Hi, my name is Tobiochi, a mechatronics engineering student and DIY builder in Nigeria. Robotics, electronics, firmware, RC aircraft and game development projects.">
+<link rel="canonical" href="https://tobiochi.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Tobiochi">
+<meta property="og:description" content="Mechatronics engineering student and DIY builder in Nigeria. Robotics, electronics and game dev.">
+<meta property="og:url" content="https://tobiochi.github.io/">
+<meta name="theme-color" content="#0e2a47">
+
+<!-- Tells Google who you are and which profiles belong to you -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tobiochi",
+  "url": "https://tobiochi.github.io/",
+  "jobTitle": "Mechatronics engineering student and DIY builder",
+  "description": "Mechatronics engineering student and DIY builder in Nigeria. Robotics, electronics and game development.",
+  "address": { "@type": "PostalAddress", "addressCountry": "NG" },
+  "sameAs": [
+    "https://youtube.com/@tobiochi",
+    "https://x.com/tobiochitek",
+    "https://github.com/TOBIOCHI"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #0e2a47;
+    --ink-deep: #0a1f36;
+    --grid: rgba(139, 177, 214, 0.14);
+    --line: #5f89b2;
+    --text: #eaf2fa;
+    --muted: #a9c0d8;
+    --accent: #ff7a1a;
+    --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+    --body: "Newsreader", Georgia, "Times New Roman", serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    color: var(--text);
+    background-color: var(--ink);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    font-family: var(--body);
+    font-size: 1.125rem;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: 0.2em; text-decoration-thickness: 2px; }
+  a:hover { color: var(--accent); }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  .wrap { max-width: 56rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* Hero */
+  header { padding: 4rem 0 3rem; }
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-stretch: 62%;
+    font-weight: 900;
+    font-size: clamp(4.5rem, 21vw, 11rem);
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+  }
+
+  /* Dimension line under the name, like a drawing callout */
+  .dim {
+    position: relative;
+    margin: 1.25rem 0 1.5rem;
+    height: 1px;
+    background: var(--accent);
+  }
+  .dim::before, .dim::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    width: 1px;
+    height: 17px;
+    background: var(--accent);
+  }
+  .dim::before { left: 0; }
+  .dim::after { right: 0; }
+  .dim span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 0.75rem;
+    background: var(--ink);
+    font-family: var(--display);
+    font-stretch: 85%;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .lede { max-width: 38rem; margin: 0; font-size: 1.35rem; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin: 1.75rem 0 0; padding: 0; list-style: none; font-family: var(--display); font-stretch: 90%; font-weight: 600; }
+
+  /* Sections */
+  section { padding: 2.5rem 0; border-top: 1px solid var(--line); }
+  h2 {
+    margin: 0 0 1.25rem;
+    font-family: var(--display);
+    font-stretch: 75%;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  p { margin: 0 0 1rem; max-width: 38rem; }
+
+  /* Projects as a spec sheet */
+  .specs { margin: 0; padding: 0; list-style: none; }
+  .specs li {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .specs li:first-child { padding-top: 0; }
+  .specs h3 { margin: 0; font-family: var(--display); font-stretch: 85%; font-weight: 700; font-size: 1.25rem; }
+  .specs p { margin: 0; color: var(--muted); }
+  .specs .stack { font-family: var(--display); font-stretch: 90%; font-size: 0.95rem; color: var(--accent); }
+
+  @media (min-width: 46rem) {
+    body { font-size: 1.2rem; }
+    .specs li { grid-template-columns: 15rem 1fr; gap: 0.25rem 2rem; }
+    .specs .stack { grid-column: 2; }
+  }
+
+  footer { padding: 2rem 0 4rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 1rem; }
+  footer p { margin: 0; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Tobiochi</h1>
+    <div class="dim" aria-hidden="true"><span>built in Nigeria</span></div>
+    <p class="lede">Hi, my name is Tobiochi, a mechatronics engineering student and DIY builder in Nigeria. I make robotics, electronics, firmware and game development projects.</p>
+    <ul class="links">
+      <li><a href="https://youtube.com/@tobiochi" rel="me">YouTube</a></li>
+      <li><a href="https://x.com/tobiochitek" rel="me">X</a></li>
+      <li><a href="https://github.com/TOBIOCHI" rel="me">GitHub</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>I study mechatronics engineering and learn by building. My work spans microcontroller firmware, hardware design, RC aircraft, robotics and fabrication, plus game design on the creative side.</p>
+      <p>I also run SmartTek Engineering &amp; Robotics, where I help students, innovators and small businesses with affordable, reliable engineering and robotics solutions.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="specs">
+        <li>
+          <h3><a href="https://github.com/TOBIOCHI/SmartRCBridge">SmartRCBridge</a></h3>
+          <p>Firmware that connects an RC receiver to a PC flight simulator over USB serial, so a real transmitter flies the sim.</p>
+          <span class="stack">C++, USB serial</span>
+        </li>
+        <li>
+          <h3>STM32 oscilloscope</h3>
+          <p>A standalone two-channel oscilloscope on the STM32F411 Black Pill, using DMA and equivalent time sampling.</p>
+          <span class="stack">STM32F411, DMA</span>
+        </li>
+        <li>
+          <h3>PID soldering iron</h3>
+          <p>A DIY temperature-controlled soldering iron with a hand-etched PCB.</p>
+          <span class="stack">Arduino Nano, PID</span>
+        </li>
+        <li>
+          <h3>Split gaming keypad</h3>
+          <p>A wireless split gaming keypad built on two ESP32 boards, inspired by the Azeron Cyborg II.</p>
+          <span class="stack">ESP32, ESP-NOW, BLE HID</span>
+        </li>
+        <li>
+          <h3><a href="https://github.com/TOBIOCHI/CloudGuard-Temporary-Review">CloudGuard</a></h3>
+          <p>A web-based AWS security scanner with six scanners and PDF reports.</p>
+          <span class="stack">Python, Flask</span>
+        </li>
+        <li>
+          <h3><a href="https://github.com/TOBIOCHI/Anime_subtitle_gen">Anime subtitle generator</a></h3>
+          <p>An app that transcribes, translates and generates subtitles offline.</p>
+          <span class="stack">Python</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <p>The fastest way to reach me is a message on <a href="https://x.com/tobiochitek" rel="me">X</a>, or a comment on my <a href="https://youtube.com/@tobiochi" rel="me">YouTube</a> channel.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tobiochi, mechatronics engineering student and DIY builder in Nigeria.</p>
+  </footer>
+
+</div>
+</body>
+</html>
